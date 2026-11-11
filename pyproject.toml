@@ -1,0 +1,31 @@
+[project]
+name = "spapp"
+version = "0.1.0"
+description = "Shopee shop activity monitor — แจ้งเตือนแชท/ออเดอร์ใหม่แบบเรียลไทม์ (Shopee Open Platform + NiceGUI)"
+readme = "README.md"
+authors = [
+    { name = "jeeradate", email = "jeeradate@gmail.com" }
+]
+requires-python = ">=3.14"
+dependencies = [
+    "fastapi>=0.162.4",
+    "httpx>=0.28.1",
+    "nicegui>=4.0.0",
+    "pydantic-settings>=2.16.2",
+    "sqlmodel>=0.0.48",
+]
+
+[project.scripts]
+spapp = "spapp.ui.main:run"
+
+[dependency-groups]
+dev = [
+    "pytest>=9.2.0",
+]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+
+[build-system]
+requires = ["uv_build>=0.12.23,<0.13.0"]
+build-backend = "uv_build"

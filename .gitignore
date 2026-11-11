@@ -1,0 +1,16 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+
+# Secrets & ข้อมูลจริง — ห้าม push ขึ้น git เด็ดขาด
+.env
+data/
+*.db
+*.db-wal
+*.db-shm
+
+# Tooling
+.pytest_cache/
+uv.lock.tmp/
